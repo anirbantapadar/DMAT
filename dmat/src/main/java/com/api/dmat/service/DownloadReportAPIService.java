@@ -10,7 +10,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.api.dmat.exception.FileNotFoundException;
 import com.api.dmat.model.Assessment;
 import com.api.dmat.model.Users;
 import com.api.dmat.repo.AssessmentRepo;
@@ -27,7 +26,7 @@ public class DownloadReportAPIService {
 	UsersRepo usersrepo;
 	
 		
-	public List fillentries() throws FileNotFoundException  {
+	public List fillentries() {
     	// Getting Current Date
     	
     	DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
@@ -69,21 +68,10 @@ public class DownloadReportAPIService {
     			
     		}
     	}
-    	
-    	//Returning the report
-    	if(entriesToBeSendAsReport.size()!=0) {
     	for(int i=0; i<entriesToBeSendAsReport.size();i++) {
     		System.out.println(entriesToBeSendAsReport.get(i).getAssessmentid());
-    	
     	}
-    	return entriesToBeSendAsReport;
-    	}
-    	
-    	else
-    	{
-    		return null;
-    	}
-    	
+    	return entriesToBeSendAsReport;  	
     }
 	
 }
