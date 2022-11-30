@@ -2,7 +2,7 @@ package com.api.dmat.service;
 
 //import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+//import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -19,6 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.api.dmat.exception.ParseException;
@@ -116,11 +117,9 @@ public class UserExcelExporterService {
 		String fileName = "DMATReport_"+ currentDateTime +".xlsx";
 		response.setHeader(headerKey, fileName);
 		
-//		String fileLocation = "C:\\Users\\anirban_tapadar\\Downloads\\dmatProject\\dmat\\FileDirectory\\"+fileName;
+//		  String fileLocation = "C:\\Users\\anirban_tapadar\\Downloads\\dmatProject\\dmat\\FileDirectory\\"+fileName;
 //        System.out.println("...........................");
-//        System.out.println(fileLocation);
-        
-        
+//        System.out.println(fileLocation);            
 //        FileOutputStream outputStream;
 		ServletOutputStream outputStream;
         try {
