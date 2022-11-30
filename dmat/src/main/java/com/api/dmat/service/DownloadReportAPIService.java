@@ -69,6 +69,8 @@ public class DownloadReportAPIService {
     			
     		}
     	}
+    	
+    	//Returning the report
     	if(entriesToBeSendAsReport.size()!=0) {
     	for(int i=0; i<entriesToBeSendAsReport.size();i++) {
     		System.out.println(entriesToBeSendAsReport.get(i).getAssessmentid());
